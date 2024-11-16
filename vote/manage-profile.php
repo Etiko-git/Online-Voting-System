@@ -2,7 +2,7 @@
 session_start();
 require('connection.php');
 
-//If your session isn't valid, it returns you to the login screen for protection
+
 if(empty($_SESSION['member_id'])){
  header("location:access-denied.php");
 } 
@@ -63,6 +63,7 @@ $sql = mysqli_query($con,"UPDATE tbMembers SET first_name='$myFirstName', last_n
 </form>
 <hr>
 </div>
+
 
 </body>
 </html>
